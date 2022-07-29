@@ -96,6 +96,25 @@ button {
 }
 
 
+.main {
+    width: 90vw;
+    margin: auto;
+}
+
+.accordion {
+    width: 60%;
+    margin: 4rem auto;
+}
+
+summary {
+    font-size: 2rem;
+}
+
+.accordion p {
+    margin: 1rem 2rem;
+}
+
+
 /* md */
 @media screen and (min-width: 768px) {
     ul {
