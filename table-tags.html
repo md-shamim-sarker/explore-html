@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tags</title>
+    <style>
+        table {
+            width: 75vw;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(214, 203, 203);
+            padding: 0.5rem;
+        }
+
+        caption {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        colgroup col:nth-child(1) {
+            background-color: #adff2f;
+        }
+
+        colgroup col:nth-child(2) {
+            background-color: #f0e68c;
+        }
+
+        tfoot tr {
+            background-color: #609116;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>This is table caption</caption>
+        <colgroup>
+            <col>
+            <col span="2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Serial</th>
+                <th>Name</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Shamim Sarker</td>
+                <td>CEO</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Sneha Mony</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Samsul Haque</td>
+                <td>Director</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Anjuma Khatun</td>
+                <td>Advisor</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Sarmin Sultana</td>
+                <td>Relation</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Copyright � 2015 Tutorial Republic</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

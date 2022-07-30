@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="showStudents();">Show Students</button>
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Roll No.</th>
+                <th>Student Name</th>
+            </tr>
+            <thead>
+            <tbody>
+                <!-- Content will be inserted here using template dynamically -->
+        <tbody>
+    </table>
+
+    <template id="studentRow">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <script>
+        /* Test if the browser supports the HTML template element by checking
+        the presence of the template element's content attribute */
+        if ("content" in document.createElement("template")) {
+            // Sample array of students
+            var students = ["Alice", "Peter", "Harry", "John", "Clark"];
+
+            function showStudents() {
+                // Selecting the elements
+                var tbody = document.querySelector("#studentsTable tbody");
+                var template = document.querySelector("#studentRow");
+
+                // Loop through item in the students array
+                for (i = 0; i < students.length; i++) {
+                    // Clone the new row from template
+                    var clone = template.content.cloneNode(true);
+                    var td = clone.querySelectorAll("td");
+
+                    // Add data to table cell from the array
+                    td[0].textContent = i + 1;
+                    td[1].textContent = students[i];
+
+                    // Append the new row into table body
+                    tbody.appendChild(clone);
+                }
+            }
+        } else {
+            alert("Your browser does not support template element!");
+        }
+    </script>
+</body>
+
+</html>
